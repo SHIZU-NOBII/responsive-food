@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    background: rgb(44, 41, 38);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+#main-header{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background: rgb(29, 26, 24);
+}
+
+#main-header .logo a{
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgb(238, 164, 80);
+}
+
+#nav-links ul{
+    display: flex;
+    align-items: center;    
+}
+
+
+#aside{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(29, 26, 24);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#aside nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+#aside nav ul li{
+    margin: 1rem 0;
+}
+
+
+#aside nav ul li a{
+    font-size: 2rem;
+    color: rgb(253, 239, 213);
+}
+
+#aside:target{
+    display: block;
+}
+
+#aside header{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%;
+}
+
+#aside header .menu-btn{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#aside header .menu-btn span{
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+
+
+#main-header #nav-links ul li{
+    margin: 0 1rem;
+}
+
+#main-header #nav-links a{
+    font-size: 1.25rem;
+    color: rgb(185, 131, 31);
+}
+
+#main-header #nav-links a:hover{
+    color: rgb(228, 163, 44);
+}
+
+#main-header .menu-btn{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+}
+
+.menu-btn span{
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+}
+
+#main h1{
+    text-align: center;
+    color: rgb(238, 164, 80);
+    margin: 1.5rem 0;
+    font-size: 3rem;
+}
+
+.products{
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.products ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+
+.products ul li{
+    background: rgb(228, 206, 182);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.products ul li img{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.food-info{
+    padding: 1rem;
+    text-align: center;
+}
+
+.food-info h2{
+    margin: 1rem 0;
+}
+
+.food-info a{
+    display: inline-block;
+    margin: 0.625rem 0;
+    color: white;
+    background-color: rgb(228, 157, 44);
+    padding: 0.625rem 1.5rem;
+    border-radius: 6px;
+    text-transform: capitalize;
+}
+
+.food-info a:hover{
+    background-color: rgb(221, 134, 34);
+}
+
+@media (max-width: 48rem) {
+    #main-header #nav-links{
+        display: none;
+    }
+    
+    #main-header .menu-btn{
+        display: flex;
+    }
+
+    #main h1{
+        font-size: 1.5rem;
+    }
+
+    .products ul{
+        grid-template-columns: 100%;
+    }
+}
